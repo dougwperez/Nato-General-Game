@@ -2,16 +2,21 @@
  * @NOTE: Prepend a `~` to css file paths that are in your node_modules
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
+
+.App {
+  text-align: center;
+}
+
 body {
   position: relative;
   color: white;
   height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png');
   font-family: sans-serif;
   overflow-y: hidden;
   display: flex;
@@ -19,44 +24,120 @@ body {
   align-items: center;
 }
 
-button {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  appearance: none;
-  font-size: 1.3rem;
-  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
-    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
-  transition: all ease-in 0.1s;
-  cursor: pointer;
-  opacity: 0.9;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-button:hover {
-  transform: scale(1.05);
-  opacity: 1;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  height: fit-content;
-  width: fit-content;
-  margin: 10px;
-}
-
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.Hello {
+.App-header {
+  /* background-color: #000000; */
+  /* background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png'); */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: 20px 0;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 111, 7);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nato-logo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  top: -500px;
+  left: -500px;
+  overflow: hidden;
+}
+h1 {
+  z-index: 2;
+  font-size: 70px;
+  margin-top: -10px;
+  font-family: 'Black Ops One', cursive;
+  font-size: 170px;
+  margin-bottom: 10px;
+  /* color: #2a4064; */
+}
+.intro-video {
+  z-index: 2;
+}
+
+.menu-panel {
+  display: flex;
+  z-index: 2;
+  margin-top: 7px;
+  padding-top: 25px;
+}
+
+/* MENU BUTTONS */
+
+.btn {
+  position: relative;
+  font-size: 40px;
+  letter-spacing: 2px;
+
+  background-color: darkgrey;
+  margin-top: 20px;
+  margin-right: 2px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 50px;
+  /* width: 200px; */
+  border-style: solid;
+  border-width: 4px;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: dimgrey;
+  border-right-color: dimgrey;
+  -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.in_btn {
+  text-align: center;
+  font-family: 'Quantico', sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+.btn:hover {
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+.btn:active {
+  background-color: darkgrey;
+  color: black;
+  border-left-color: dimgrey;
+  border-top-color: dimgrey;
+  border-bottom-color: white;
+  border-right-color: white;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
 }
